@@ -1,7 +1,7 @@
 %bcond_with prebuilt_metal
-%global upstream_version 0.43.2
+%global upstream_version 0.43.3
 Name:           quadrahq
-Version:        0.43.2
+Version:        0.43.3
 Release:        1%{?dist}
 Summary:        Run the macOS Roblox client on Linux through Darling
 License:        GPL-3.0-only AND MIT AND ISC AND OFL-1.1
@@ -101,6 +101,9 @@ python3 -m compileall -q -d "%{_datadir}/quadrahq/launcher" "%{buildroot}%{_data
 %{_datadir}/mime/packages/org.quadrahq.Quadra.xml
 
 %changelog
+* Mon Nov 09 2026 Quadra maintainers <noreply@aubree.wtf> - 0.43.3-1
+- Quadra offers to move to the Rust version, which is in early testing: as an AppImage, as a Flatpak or built on the user's computer. The offer appears once, and again from Settings.
+
 * Thu Nov 05 2026 Quadra maintainers <noreply@aubree.wtf> - 0.43.2-1
 - The launcher starts again on distributions without GLibUnix: it uses GLibUnix's signal function when available and GLib.unix_signal_add otherwise.
 

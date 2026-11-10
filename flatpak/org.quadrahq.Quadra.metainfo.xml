@@ -68,6 +68,11 @@
     <control>keyboard</control>
   </supports>
   <releases>
+    <release version="0.43.3" date="2026-11-09">
+      <description>
+        <p>Quadra now offers to move you to the Rust version, which is in early testing. You can install it as an AppImage, as a Flatpak or by building it on your computer. Nothing else changes from 0.43.2.</p>
+      </description>
+    </release>
     <release version="0.43.2" date="2026-11-05">
       <description>
         <p>The launcher starts again on systems whose GLib does not provide GLibUnix, and uses GLibUnix where it is available. Nothing else changes from 0.43.1.</p>

@@ -19,6 +19,7 @@ from .. import (
     logevents,
     modguard,
     mods,
+    rebuild,
     region,
     studio,
     theme,
@@ -34,6 +35,7 @@ from . import (
     info_page,
     mods_page,
     play_page,
+    rebuild_dialog,
     servers_page,
     settings_page,
     studio_page,
@@ -746,6 +748,9 @@ class LauncherWindow(Adw.ApplicationWindow):
                         )
             except Exception:
                 pass
+
+        if rebuild.prompt.should_offer(self.settings, time.time()):
+            GLib.idle_add(rebuild_dialog.offer_rust_version, self)
 
     def _show_launcher_update_dialog(self, tag):
         dialog = Adw.AlertDialog(

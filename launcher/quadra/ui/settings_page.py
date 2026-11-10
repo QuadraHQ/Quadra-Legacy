@@ -12,7 +12,7 @@ from ..i18n import _
 from ..rosemary import install as rosemary_install
 from ..rosemary import runtime as rosemary_runtime
 from ..rosemary import xr as rosemary_xr
-from . import dialogs, flags_page, system, widgets
+from . import dialogs, flags_page, rebuild_dialog, system, widgets
 
 __all__ = [
     "DNS_CHOICES",
@@ -67,6 +67,18 @@ class SettingsPage(Adw.Bin):
         force_update = widgets._button_row(_("Force update"))
         force_update.connect("activated", lambda *_args: self.force_update_launcher())
         launcher_group.add(force_update)
+
+        rust_row = Adw.ActionRow(
+            title=_("Rust version"),
+            subtitle=_("Quadra has been rewritten in Rust. Move to it from here."),
+        )
+        rust_button = Gtk.Button(label=_("Move…"), valign=Gtk.Align.CENTER)
+        rust_button.connect(
+            "clicked",
+            lambda *_args: rebuild_dialog.offer_rust_version(window, forced=True),
+        )
+        rust_row.add_suffix(rust_button)
+        launcher_group.add(rust_row)
 
         self.launcher_progress = Gtk.ProgressBar(
             show_text=True,

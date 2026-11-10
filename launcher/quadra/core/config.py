@@ -114,6 +114,8 @@ DEFAULT_SETTINGS = {
     # A toast when the game you joined was updated in the last day.
     "game_update_notice": True,
     "playtime_seconds": 0,
+    "rust_rebuild_dismissed": False,
+    "rust_rebuild_snoozed_until": 0.0,
     "discord_rpc": True,
     "discord_rpc_game": True,
     "discord_rpc_icon": False,

@@ -6,6 +6,7 @@ in the order they load (a module only uses the ones above it):
     dialogs          toasts, the copyable error dialog, the VR warning
     widgets          small widgets and layout helpers shared by the pages
     system           restarting the launcher, opening a terminal, the project's links
+    rebuild_dialog   the offer to move to the Rust version of Quadra
     logs_view        the game log viewer on the Play page
     play_page        Play
     flags_page       the fast flag editors (client and Studio)
@@ -46,6 +47,7 @@ from . import (
     logs_view,
     mods_page,
     play_page,
+    rebuild_dialog,
     servers_page,
     settings_page,
     studio_page,
@@ -59,6 +61,7 @@ namespace.share_names(
         dialogs,
         widgets,
         system,
+        rebuild_dialog,
         logs_view,
         play_page,
         flags_page,
@@ -83,6 +86,7 @@ if TYPE_CHECKING:  # tells editors and type checkers what ui.NAME is
     from .logs_view import *
     from .mods_page import *
     from .play_page import *
+    from .rebuild_dialog import *
     from .servers_page import *
     from .settings_page import *
     from .studio_page import *

@@ -1,3 +1,9 @@
+quadrahq (0.43.3-1) unstable; urgency=medium
+
+  * Quadra offers to move to the Rust version, which is in early testing: as an AppImage, as a Flatpak or built on the user's computer. The offer appears once, and again from Settings.
+
+ -- Quadra maintainers <noreply@aubree.wtf>  Mon, 09 Nov 2026 12:00:00 +0000
+
 quadrahq (0.43.2-1) unstable; urgency=medium
 
   * The launcher starts again on distributions without GLibUnix: it uses GLibUnix's signal function when available and GLib.unix_signal_add otherwise.

@@ -3,6 +3,16 @@
 ## Unreleased
 
 
+## 0.43.3 — 2026-11-09
+
+- Quadra now offers to move you to the Rust version. The rewrite is in early testing (0.50 alpha) and runs Roblox through
+  Rosemary only. The offer appears once when you open the settings window, with "Not now" and "Don't ask again"; it
+  is never shown on Darling or on the Flatpak. You choose how to install the new Quadra: the AppImage, the Flatpak,
+  or a build on your computer. Settings → Environment → Quadra → Rust version offers it again at any time.
+- The AppImage and the Flatpak are downloaded from the rewrite's releases and checked against the release's
+  `SHA256SUMS` before anything is installed. Your Roblox sign-in and settings are not carried over, and this Quadra stays
+  installed and keeps working.
+
 ## 0.43.2 — 2026-11-05
 
 - The launcher starts again on distributions whose GLib bindings do not provide `GLibUnix`. 0.43.1 still asked for
