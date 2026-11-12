@@ -1,4 +1,4 @@
-> [!DISCONTINUED]
+> [!WARNING]
 > This version is no longer gonna be updated, focus is now on the Quadra Rewrite (in rust btw)
 > thats all
 > bai :3 
