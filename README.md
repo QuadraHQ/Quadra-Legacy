@@ -32,6 +32,9 @@ Use the installer below to install or update.
 curl -fsSL https://quadrahq.org/install.sh | bash
 ```
 
+This now installs the [Quadra Rewrite](https://github.com/QuadraHQ/quadra-rewrite), the Rust version of Quadra, as an
+AppImage. The Python launcher's own installer is kept as `install-legacy.sh`.
+
 **NixOS (x86_64):** use the [Nix package and NixOS module](packaging/nix/README.md).
 It bundles CiderDarling by default, with regular Darling available as an
 alternative. From a checkout, run `nix run .`; use Nix to install and update

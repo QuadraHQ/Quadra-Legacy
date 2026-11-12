@@ -24,7 +24,7 @@ class InstallerRuntimeTests(unittest.TestCase):
         self.base = Path(self.temporary.name)
         self.functions = self.base / "runtime-installer-functions.sh"
         self.launcher_functions = self.base / "installer-functions.sh"
-        for script, functions in (("install-runtime.sh", self.functions), ("install.sh", self.launcher_functions)):
+        for script, functions in (("install-runtime.sh", self.functions), ("install-legacy.sh", self.launcher_functions)):
             source = (ROOT / script).read_text()
             self.assertTrue(source.endswith('main "$@"; exit\n'))
             functions.write_text(source.removesuffix('main "$@"; exit\n') + '\nCIDER_DARLING_PINNED=1\n')
